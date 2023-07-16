@@ -1,0 +1,8 @@
+<h1>Theory</h1>
+
+<p>The `tap` operator is a very useful and interesting operator. It is here to execute a side effect on the next error or complete event of an observable. For every emitted value we apply a function that takes that value and executes some logic.
+
+  The interesting part here is, the logic is not interfering with the existing `Observable`. It just runs the function as a side effect.
+
+  Very similar to the subscribe function, `tap` can take callbacks for the next error or complete notifications.</p>
+

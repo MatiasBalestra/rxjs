@@ -1,0 +1,8 @@
+<h1>Theory</h1>
+<p>The `takeUntil` operator is a bit different than most of the others, it is not interfering with passed values nor executing a side effect. It takes an `Observable` as config param and unsubscribes from the source `Observable` when the passed `Observable` emits a value.
+
+  This operator handles logic related to the moment of unsubscription. The passed `Observable` is the trigger to unsubscribe.</p>
+
+
+<input type="text" #input1>
+<button #btnstop>click</button>

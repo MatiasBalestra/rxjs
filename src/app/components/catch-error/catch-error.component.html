@@ -1,0 +1,12 @@
+
+<h1>Theory</h1>
+<p>t was already mentioned, that an Observable has an error channel. This one is used anytime an error happens inside our `Observable`. In general, such an emitted error can happen in two scenarios.
+
+  The error channel is used manually
+  Inside our chain, an error is thrown
+  When one instantiates an `Observable` manually, by calling its constructor, one could emit values over the error channel. There are also functions provided by RxJS that represent an `Observable` that throws an error. This is usually rather an edge case. It is way more common, that there is an error thrown inside our `Observable` pipeline. This could happen by manually calling `throw new Error()` but also if an unexpected Exception happens. A very common example of this scenario might be
+
+  undefined is not a function
+  All errors that are thrown inside our pipe are caught by the `Observable` and passed to the error channel.
+
+  The `catchError` operator is the most common operator to handle errors. It has two parameters `error` and `source`. The `error` parameter represents the error that is somewhere thrown in our `Observable`. One could use that to differentiate between errors and react accordingly. The `source` parameter represents our `Observable`. The function passed to `catchError` needs to return a new `Observable`, because usually an `Observable` ends when an error is thrown. By returning a new `Observable` we can ensure that the following operators are applied to some `Observable`. Therefore one could also return the `source` parameter to "resubscribe" to the `source` `Observable`, which kinda works like a retry mechanism.  </p>
