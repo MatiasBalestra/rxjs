@@ -13,6 +13,7 @@ import { CatchErrorComponent } from './components/catch-error/catch-error.compon
 import { TakeUntilComponent } from './components/take-until/take-until.component';
 import { ScanComponent } from './components/scan/scan.component';
 import { SwitchMapComponent } from './components/switch-map/switch-map.component';
+import { SubjectsComponent } from './components/subjects/subjects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SwitchMapComponent } from './components/switch-map/switch-map.component
     CatchErrorComponent,
     TakeUntilComponent,
     ScanComponent,
-    SwitchMapComponent
+    SwitchMapComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { CatchErrorComponent } from './components/catch-error/catch-error.compon
 import { TakeUntilComponent } from './components/take-until/take-until.component';
 import { ScanComponent } from './components/scan/scan.component';
 import { SwitchMapComponent } from './components/switch-map/switch-map.component';
+import { SubjectsComponent } from './components/subjects/subjects.component';
 
 const routes: Routes = [
   {path: 'from', component: TestComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'take', component: TakeUntilComponent},
   {path: 'scan', component: ScanComponent},
   {path: 'switch', component: SwitchMapComponent},
+  {path: 'subjects', component: SubjectsComponent},
 ];
 
 @NgModule({

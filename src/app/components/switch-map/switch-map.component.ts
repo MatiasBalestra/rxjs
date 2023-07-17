@@ -15,10 +15,11 @@ export class SwitchMapComponent implements OnInit {
   ngOnInit(): void {
 
 
-    const switchMapSource = timer(0, 1000).pipe(
+/*     const switchMapSource = timer(0, 1000).pipe(
       switchMap(x => timer(1500))
     );
-    switchMapSource.subscribe({next: x => console.log(x)}); // no output
+    switchMapSource.subscribe({next: x => console.log(x)}); // no output */
+
 
     const concatMapSource = timer(0, 1000).pipe(
       concatMap(x => timer(1500))
@@ -26,5 +27,11 @@ export class SwitchMapComponent implements OnInit {
     concatMapSource.subscribe({next: x => console.log(x)}); // 0, 0, 0, 0, 0, 0 ...
 
   }
+
+
+    // Explicame la diferencia entre switchMap y concatMap
+
+
+
 
 }

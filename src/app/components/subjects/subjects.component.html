@@ -1,0 +1,16 @@
+<h1>Theory</h1>
+<p>
+  Un "observable" es una colección de valores o eventos que se pueden emitir en el tiempo. Puede ser tratado como una secuencia de eventos a los que se puede suscribir y reaccionar.
+
+Un "sujeto" (subject) es una especie de observable que también puede actuar como un observador. Puede emitir valores o eventos hacia múltiples observadores y también puede suscribirse a otros observables. Hay diferentes tipos de sujetos en RxJS, y los más comunes son:
+
+BehaviorSubject: Es un tipo de sujeto que mantiene el último valor emitido y lo envía inmediatamente a los nuevos suscriptores. Siempre emite el último valor, incluso si el suscriptor se suscribe después de que se haya emitido el valor.
+
+ReplaySubject: Es un tipo de sujeto que almacena en caché un número específico de valores emitidos y los envía a los nuevos suscriptores. Los nuevos suscriptores reciben los últimos valores almacenados en caché.
+
+AsyncSubject: Es un tipo de sujeto que solo emite el último valor cuando se completa. Solo cuando se llama al método complete(), el AsyncSubject emite el último valor a los suscriptores, independientemente de cuántos valores se hayan emitido anteriormente.
+
+Subject: Es un tipo de sujeto simple que no almacena ningún valor anterior y solo envía los valores emitidos a los suscriptores en el momento de la emisión.
+
+Estos son algunos de los tipos de sujetos comunes en RxJS, pero también hay otros. La elección del sujeto adecuado depende de los requisitos específicos de tu caso de uso.
+</p>
